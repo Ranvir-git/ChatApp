@@ -634,18 +634,6 @@
         const outputArea = document.getElementById('outputArea');
         const loadingIndicator = document.getElementById('loadingIndicator');
 
-       
-        // Get API key from environment or local storage (no longer needed for frontend)
-        const GEMINI_API_KEY = localStorage.getItem('GEMINI_API_KEY') || prompt('Please enter your Google Gemini API Key:');
-        
-        if (!GEMINI_API_KEY) {
-            alert('API Key is required to use this application');
-        } else {
-            localStorage.setItem('GEMINI_API_KEY', GEMINI_API_KEY);
-        }
-        
-        const MODEL_NAME = "gemini-2.0-flash"; // Or your preferred model
-
         const systemInstructionText = "You are a Coding Instructor, who answer only to coding related problem. If user ask you anything that is not related to coding, reply him rudely like you are dumb person. But if he/she ask problem related to coding response in a detail manner.";
 
         askButton.addEventListener('click', async () => {
